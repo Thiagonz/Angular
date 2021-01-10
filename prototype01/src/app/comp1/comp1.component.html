@@ -1,0 +1,25 @@
+<div class="container mt-4 mb-4">  
+  <div class="row">
+    <div class="col">
+      <div class="card">
+        <div class="card-body">
+          <label>Parent to child</label>
+          <div class="container mt-4 mb-4">
+            <div class="row">
+              <div class="col"><button class="btn btn-primary" (click)="remVal()">Subtrai</button></div>   
+              <div class="col"><button class="btn btn-primary" (click)="addVal()">Soma</button></div>          
+            </div>
+          </div>
+          <div>
+            <p>{{valueEmittedFromChildComponent }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <app-comp1child [value]="value" (buttonClicked)="parrentEventHandlerFunction($event)"></app-comp1child>
+        </div>
+      </div>
+    </div>      
+  </div>
+</div>
